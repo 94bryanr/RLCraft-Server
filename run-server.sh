@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEFAULT_RAM=6G
+DEFAULT_RAM=10G
 
 if [ ! -f eula.txt ]; then
      if [ "$EULA" != "" ]; then
@@ -12,10 +12,10 @@ if [ ! -f eula.txt ]; then
      fi
 fi
 
-if [ ! -d "world" ] && [ -d "server-data" ]; then
-     echo "Copying previous data..."
-     cp -Rfv server-data/* .
-fi
+# if [ ! -d "world" ] && [ -d "server-data" ]; then
+#      echo "Copying previous data..."
+#      cp -Rfv server-data/* .
+# fi
 
 # Parameters from aikar's post:
 # https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/
